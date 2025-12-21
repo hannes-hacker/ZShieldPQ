@@ -42,6 +42,7 @@ the library. The changes can be found in "ecdsa/keys.py" in the lines 6, 30, 460
 The virtual environment with the necessary libraries should be included in this directory, labelled ".venv".
 If it is not possible to execute the scripts because of missing libraries, execute the following commands:
 python3 -m venv .venv (Mac/Linux) or python -m venv .venv (Windows)
+source .venv/bin/activate
 pip install ecdsa
 pip install pycryptodome
 pip install numpy
