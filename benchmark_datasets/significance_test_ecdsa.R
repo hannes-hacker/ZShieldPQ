@@ -9,7 +9,7 @@ colnames(ecdsa_dataset) <- c("Operation", "Iteration", "Hashclass", "Time")
 
 # Creating a linear model to evaluate
 # if the operation and hashclass is statistically significantly influencing the runtime
-reg <- lm(Time ~ Operation + Hashclass, data = ecdsas_dataset)
+reg <- lm(Time ~ Operation + Hashclass, data = ecdsa_dataset)
 
 # Depending on the R environment you are using (here: VSCode),
 # execute the script once and call the following commands in the terminal:

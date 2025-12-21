@@ -20,5 +20,5 @@ colnames(overall_sum) <- c("Hashclass", "Time")
 
 # Depending on the R environment you are using (here: VSCode),
 # execute the script once and call the following commands in the terminal:
-#   - average_table:    average runtime (in ns) per operation per XOF hash function
+#   - averages_table:    average runtime (in ns) per operation per XOF hash function
 #   - overall_sum:      sum runtime (in ns) of all operations per XOF hash function
