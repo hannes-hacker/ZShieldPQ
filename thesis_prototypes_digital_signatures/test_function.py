@@ -20,7 +20,6 @@ def test_ecdsa():
         print("ECDSA signing and verification process successful!")
         public_key = private_key.key.verifying_key.to_string()
         print(f"Length of the public key: {len(public_key)}.")
-        print(type(public_key))
         print(f"Length of the private key: {len(private_key.key.to_string())}.")
         print(f"Length of the signature: {len(signature)}.")
         print("--------------------------------------------------")
@@ -64,9 +63,7 @@ def test_falcon():
         print(f"Length of the private key (total): {length_sk}.")
         print(f"Length of the private key (reduced): {length_sk - length_G}.")
         print(f"Length of the signature (classic): {len(signature1)}.")
-        print(type(signature1))
         print(f"Length of the signature (recover): {len(signature2)}.")
-        print(type(signature2))
         print("--------------------------------------------------")
     else:
         print("Falcon signing and verification process unsuccessful!")
@@ -79,11 +76,11 @@ def test_eddsa():
     signature = private_key.sign(b"Hello World!")
     result = public_key.verify(b"Hello World!", signature)
     if result:
+        print("EdDSA signing and verification process successful!")
         print(f"Length of the public key: {public_key.pubkey.baselen}.")
         print(f"Length of the private key: {private_key.key.baselen}.")
         print(f"Length of the signature: {len(signature)}.")
-        print("--------------------------------------------------")
-        print("EdDSA signing and verification process successful!")
+        print("--------------------------------------------------")        
     else:
         print("EdDSA signing and verification process unsuccessful!")
 
